@@ -1,3 +1,4 @@
+
 def suma(a, b): # Definimos la función "suma" • Tiene 2 parámetros.
     return a+b # "return" devuelve el resultado de la función.
 
