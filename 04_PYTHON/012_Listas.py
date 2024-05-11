@@ -22,7 +22,7 @@ miLista = [22, True, "una cadena", [1, 2]]
 print(miLista[0])
 
 miLista = [[1,2] , [3,4] , [5,6]]
-miVar = miLista[1,1]
+miVar = miLista[1]
 print(miVar)
 
 #   Función con una lista como parámetro
@@ -36,7 +36,10 @@ frutas = ["Manzana", "banana", "cereza"]
 miFunccion(frutas)
 
 # Podemos utilizar los operadores vistos en el tema anterior para comparar listas
+
+lista1 = ['m2', 'm1', 'm3']
 lista2 = ['t2', 't1', 't3']
+
 lista1 == lista2
 # Out[17]: False
 
@@ -46,7 +49,7 @@ lista1 in lista2
 lista1 == ['t1', 't2', 't3']
 # Out [18]: True
 
-listal is ['t1', 't2', 't3']
+lista1 is ['t1', 't2', 't3']
 # Out [19]: False
 
 # Una cosa interesante es que una lista puede llegar a contener una función.
