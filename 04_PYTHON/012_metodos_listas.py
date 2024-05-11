@@ -54,7 +54,8 @@ print(miLista4[:])
 
 Lista5=[l, miLista2]
 
-lista3=[2,5, 32,8,45,3,1] # Para ordenar listas
-lista3.sort()
-
+lista3=[2,5, 32,8,45,3,1]
+lista3.sort() # Para ordenar listas
 lista3.reverse() # Para ordenar listas en orden contrario o reverso
+
+# Estas funciones no funcionan si utu¡ilizmos numeros y strings
