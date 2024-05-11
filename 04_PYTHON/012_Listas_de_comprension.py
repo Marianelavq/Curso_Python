@@ -46,12 +46,62 @@ print(col_tom)
 
 # Arriba y abajo son el mismo algoritmo solo que el de abajo es mas resumido, es una lista de comprensión 
 
-co12 = [row[1] for row in matrix] # Obtiene la segunda columna
-print(co12)
+co12 = [row[1] for row in matrix] # Esta expresion se lee: deme row 1 para cada row en m y se obtiene la segunda columna
+print(co12)                       # Esta expresión recorre la matriz m fila a fila, guardando cada fila en la variable row y, en cada iteración, obtiene el segundo elemento de la fila
+
 # ['a2', 'b2', 'c2']
 
 # m no se ha modificado
 [['a1', 'a2', 'a3'], ['b1', 'b2', 'b3'], ['c1', 'c2', 'c3']]
 
+# 
 
+[matrix[i][i] for i in [0, 1, 2]] # Extrae la diagonal de la matriz
+
+# ['a1', 'b2', 'c3']
+
+# Extraemos las longitudes de los elementos de n1
+
+[len(row) for row in matrix] # Pueden haber expresiones dentro
+# [3, 2, 6]
+
+[len(row) for row in matrix if len(row) > 2] # Filtramos elementos
+# [3, 6]
+
+squares = [n ** 2 for n in range(10)] # Más expresiones dentro
+# squares [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# Cómo copiar listas
+
+la = [1, 2, 3]
+lb = la[:] # Copiamos la lista
+lc = list(la) # otra manera de hacer una copia
+la[2] = 'z'
+
+print (la) # hemos modificado ''la''
+# [1, 2, 'z']
+
+print (lb) # pero no "'1b''
+# [1, 2, 3]
+
+print(lc) # ni ''1c''
+# [1, 2, 3]
+
+# Aislar una variable de cambios externos 
+
+import copy                 # importamos modulo copy
+la = [1, 2, [31, 32, 33]]   # Lista anidada
+lb = copy.copy(la)         # Copia 'plana' (igual que 1b = la[:]) 'plana'
+lc = copy.deepcopy(la)      # Copia profunda. Por si hay elementos anidados
+la[1] = 'z'
+la[2][2] = 'zz'
+
+print (la)
+# [1,'z', [31, 32,'zz']]
+
+print(lb)                   # Copia plana solo copia elementos de el nivel
+# [1, 2, [31, 32, 'zz']]
+
+print(lc)                   # Copia profunda copia a todos los niveles
+# [1, 2, [31, 32, 33]]
 

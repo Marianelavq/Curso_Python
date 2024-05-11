@@ -85,9 +85,65 @@ print(num2)
 print(valor1)
 print(num3)
 
+# Si definimos una tupla con un único elemento de tipo númerico debemos tener cuidado
+# Python puede interpretar los paréntesis como parte de la expresión matemática y definir un tipo numérico, en lugar de una tupla
 
+tupla = (2)
+print(tupla)
+# 2
 
+print(type(tupla))
+# int
 
+# efectivamente me lo esta reconociendo como una operación y no como una tupla
 
+# Para solucionarlo utilizamos la sintaxis (num,)
 
+tupla = (2,)
+print(tupla)
+# (2,)
+
+print(type(tupla))
+# tuple
+
+# Un tupla con varios elementos puede asignarse a una única variable
+
+tupla = (1, 2, 3, 4)
+
+# Una tupla permite asignar su contenido a varias variables simultaneamente
+
+tupla = (num1, num2, num3)
+
+Var1=num1
+# 2
+
+Var2=num2
+# 3
+
+Var3=num3
+# 4
+
+# El numero de varables debe concidir con el numero de elementos de la tupla
+# numl, num2, num3 = tupla
+
+# ValueError Traceback (most recent call last)
+# ‹ipython-input-22-da3d6962b821> in ‹module›
+# ---› 1 num1, num2, num3 = tupla
+
+# ValueError: too many values to unpack (expected 3)
+
+ # Este mecanismo de desempaquetado 
+
+def func():
+  return (5,6) # Los parentesis no son necesarios para indicar que es una tupla en el return
+
+func ()
+#(5, 6)
+
+num1, num2 = func()
+print(num1)
+# 5
+
+print(num2)
+# 6
 
