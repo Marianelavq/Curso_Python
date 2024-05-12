@@ -236,3 +236,77 @@ Lista=list(zip(claves, valores))
 
 # Anidamiento en diccionarios
 
+# En los diccionarios no se acceden utilizando un índice si no a través del nombre de la clave entre corchetes
+
+x = miDiccionario ["nombre"]
+print(x)
+
+# Método get()
+
+dic2 = {
+0: "cero",
+1: "uno",
+2: "dos",
+3: "tres"
+}
+
+dic2[0]
+print(dic2[0])
+# 'cero'
+
+dic2[3]
+print(dic2[3])
+#'tres'
+
+dic2 = {
+    0: "cero",
+    1: "uno",
+    2: "dos",
+    3: "tres"
+}
+
+dic2[0]
+# 'cero'
+
+dic2[3]
+'tres'
+# 'tres'
+
+dic3 = {
+     ("uno", 1): "one",
+     ("dos", 2): "two",
+     ("tres", 3): "three"
+}
+
+dic3[("uno", 1)]
+# 'one'
+
+dic3["dos", 2]
+# 'two'
+
+#
+
+dic2 = {
+    0: "cero",
+    1: "uno",
+    2: "dos",
+    3: "tres"
+}
+
+dic2[0]
+# 'cero'
+
+dic2[3]
+# 'tres'
+
+dic3 = {
+     ("uno", 1): "one",
+     ("dos", 2): "two",
+     ("tres", 3): "three"
+}
+
+dic3[("uno", 1)]
+# 'one'
+
+dic3["dos", 2]
+# 'two'
